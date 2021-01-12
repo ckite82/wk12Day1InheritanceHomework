@@ -6,8 +6,8 @@ public class Developer extends Employee {
 
     private String deptName;
 
-    public Developer(String deptName) {
-        super("Davie", "DS56789", 20000);
+    public Developer(String name, String nationalInsuranceNumber, double salary, String deptName) {
+        super(name, nationalInsuranceNumber, salary);
         this.deptName = deptName;
     }
 

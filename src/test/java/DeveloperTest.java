@@ -10,7 +10,7 @@ public class DeveloperTest {
 
     @Before
     public void before() {
-        developer = new Developer("Tech Staff");
+        developer = new Developer("Davie", "DS56789", 20000.00, "Tech Staff");
     }
 
     @Test
@@ -25,17 +25,22 @@ public class DeveloperTest {
 
     @Test
     public void hasSalary() {
-        assertEquals(20000, developer.getSalary());
+        assertEquals(20000.00, developer.getSalary(), 0.01);
     }
 
     @Test
     public void canRaiseSalary(){
-        assertEquals(21000, developer.raiseSalary(1000.50), 0.01);
+        assertEquals(21000.50, developer.raiseSalary(1000.50), 0.01);
     }
 
     @Test
     public void canPayBonus(){
         assertEquals(200, developer.payBonus(20000), 0.01);
+    }
+
+    @Test
+    public void canGetDeptName(){
+        assertEquals("Tech Staff", developer.getDeptName());
     }
 }
 

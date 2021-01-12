@@ -6,8 +6,8 @@ public class DatabaseAdmin extends Employee{
 
     private String deptName;
 
-    public DatabaseAdmin(String deptName){
-        super("Kat", "KM34567", 22000);
+    public DatabaseAdmin(String name, String nationalInsuranceNumber, double salary, String deptName){
+        super(name, nationalInsuranceNumber, salary);
         this.deptName = deptName;
     }
 

@@ -2,11 +2,11 @@ package staff;
 
 public abstract class Employee {
 
-    private String name;
-    private String nationalInsuranceNumber;
-    private int salary;
+    String name;
+    String nationalInsuranceNumber;
+    double salary;
 
-    public Employee(String name, String nationalInsuranceNumber, int salary){
+    public Employee(String name, String nationalInsuranceNumber, double salary){
         this.name = name;
         this.nationalInsuranceNumber = nationalInsuranceNumber;
         this.salary = salary;
@@ -20,7 +20,7 @@ public abstract class Employee {
         return nationalInsuranceNumber;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 

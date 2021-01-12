@@ -8,37 +8,35 @@ import static org.junit.Assert.assertEquals;
 public class DirectorTest {
 
     Director director;
-    Employee employee;
 
     @Before
     public void before(){
-        director = new Director(1000000.00);
-        employee = new Employee("Andrew", "AK1010101", 100000);
+        director = new Director("Andrew", "AZ98765", 100000.00, "Management", 10000000.00);
     }
 
     @Test
     public void hasName(){
-        assertEquals("Jeff", director.getName());
+        assertEquals("Andrew", director.getName());
     }
 
     @Test
     public void hasNI() {
-        assertEquals("CK12345", director.getNationalInsuranceNumber());
+        assertEquals("AZ98765", director.getNationalInsuranceNumber());
     }
 
     @Test
     public void hasSalary() {
-        assertEquals(25000, director.getSalary());
+        assertEquals(100000.00, director.getSalary(), 0.01);
     }
 
     @Test
     public void canRaiseSalary(){
-        assertEquals(26000, director.raiseSalary(1000.50), 0.01);
+        assertEquals(101000.50, director.raiseSalary(1000.50), 0.01);
     }
 
     @Test
     public void canPayBonus(){
-        assertEquals(250, director.payBonus(25000), 0.01);
+        assertEquals(1000.00, director.payBonus(100000.00), 0.01);
     }
 
     @Test
@@ -48,6 +46,6 @@ public class DirectorTest {
 
     @Test
     public void hasBudget(){
-        assertEquals(1000000.00, director.getBudget(), 0.01);
+        assertEquals(10000000.00, director.getBudget(), 0.01);
     }
 }
